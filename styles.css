@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:wght@100&family=Source+Code+Pro:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1rem;
+    font-family: 'Black Ops One', 'Roboto', 'Source Code Pro', sans-serif;
+}
+.wrapper{
+    display: flex;
+}
+.image-space{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 33vw;
+    background-image: url(jeet-dhanoa-z3dCfQkJdMI-unsplash.jpg);
+    background-size: cover;
+}
+.logo-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color:	rgb(0,0,0,50%)
+    
+}
+.logo-container > span{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: white;
+    padding: 2.5rem;
+    transform: scaleY(1.2);
+    transform: scaleX(1.2);
+}
+.content-space{
+    background-color: rgb(230, 125, 45,35%);
+    height: 100vh;
+    width: 67vw;
+}
+.text-register-container{
+    font-size: 1.7rem;
+    color: darkblue;
+    padding: 3rem;
+}
+.signup-space{
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+}
+.bordered-sign{
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 30vw;
+
+}
+.signup-logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+#signup-logo{
+    border-radius: 20px;
+}
+#signup-logo-text{
+    padding: 2rem;
+}
+.space-taker{
+    position: relative;
+    margin-left: 5rem;
+    max-width: 100%;
+}
+.signup-text{
+    padding-top: 1rem;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+.signup-form{
+    padding: 3rem;
+    height: 43vh;
+}
+.names{
+    display: flex;
+    width: 33%;
+    height: 4vh;
+}
+.last-name{
+    margin-left: 2rem;
+}
+form{
+    width: 100%;
+    height: 100%;
+}
+label{
+    display: block;
+}
+.wrapper-email-phone{
+    width: 33%;
+    display: flex;
+    margin-top: 1rem;
+    >.phone {
+        margin-left: 2rem;
+    }
+}
+.wrapper-passwords{
+    width: 33%;
+    display: flex;
+    margin-top: 1rem;
+    >.submit-password{
+        margin-left: 2rem;
+    }
+}
+.submit-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 18vh;
+}
+input{
+    border: 1px solid black;
+    border-radius: 4px;
+}
+input:focus{
+    outline: none;
+}
+input[type="submit"]{
+    width: 15rem;
+    height: 5rem;
+    background-color: rgb(0,128,0,60%);
+    border: 2px solid gray;
+    border-radius: 7px;
+}
+input[type="submit"]:hover{
+    background-color: green;
+}
+p em {
+    font-size: smaller;
+
+}
+a{
+    text-decoration: none;
+    color: blueviolet;
+}
+a.sign-in-link:hover{
+    color: rgb(138,43,226,70%);
+    text-decoration: underline;
+    font-size: large;
+}
