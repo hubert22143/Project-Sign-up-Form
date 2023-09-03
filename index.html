@@ -38,7 +38,7 @@
                 <label for="first-name">First Name</label>
                 <input type="text" id="first-name" placeholder="example: John">
             </div>
-            <div class="cryteria" id="thename">
+            <div class="cryteria" id="thename" data-input-id="first-name">
                 <ul>
                     <li>At least four characters</li>
                     <li>No special symbols</li>
@@ -48,7 +48,7 @@
                 <label for="last-name">Last Name</label>
                 <input type="text" id="last-name" placeholder="example: Brzeczyszczykiewicz">
             </div>
-            <div class="cryteria" id="thelastname">
+            <div class="cryteria" id="thelastname" data-input-id="last-name">
                 <ul>
                     <li>No special symbols</li>
                 </ul>
@@ -62,18 +62,18 @@
                     <label for="email">Email</label>
                     <input type="email" id="email" placeholder="example: myemail@o2.pl">
                 </div>
-                <div class="cryteria" id="theemail">
+                <div class="cryteria" id="theemail" data-input-id="email">
                     <ul>
                         <li>Must match the format, ex: myemail@o2.pl</li>
                     </ul>
                 </div>
                 <div class="phone">
                     <label for="phone-number">Phone Number</label>
-                    <input type="number" id="phone-number" placeholder="example: +(48)123456789">
+                    <input type="text" id="phone-number" placeholder="example: +(48)123456789">
                 </div>
-                <div class="cryteria" id="thephone">
+                <div class="cryteria" id="thephone" data-input-id="phone">
                     <ul>
-                        <li>No special symbols</li>
+                        <li>Must match the format ex: +(48)123456789</li>
                     </ul>
                 </div>
             </div>
@@ -82,18 +82,18 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Your password..">
                 </div>
-                <div class="cryteria" id="thepassword">
+                <div class="cryteria" id="thepassword" data-input-id="password">
                     <ul>
-                        <li>No special symbols</li>
+                        <li>At least six letters, special symbols allowed</li>
                     </ul>
                 </div>
                 <div class="submit-password">
                     <label for="submit-password">Submit Password</label>
                     <input type="password" id="submit-password" placeholder="Rewrite your password...">
                 </div>
-                <div class="cryteria" id="thesubmitpassword">
+                <div class="cryteria" id="thesubmitpassword" data-input-id="submit-password">
                     <ul>
-                        <li>No special symbols</li>
+                        <li>Must match the previous password</li>
                     </ul>
                 </div>
             </div>

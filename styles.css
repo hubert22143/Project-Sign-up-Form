@@ -140,8 +140,8 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: green;
 }
-input[type="number"]{
-    min-width: 180px;
+#phone-number{
+    min-width: 160px;
 }
 #last-name{
     min-width: 180px;
@@ -179,4 +179,20 @@ ul{
     margin: 0;
     line-height: 1rem;
     letter-spacing: 0.1rem;
+}
+input.invalid{
+    border-color: red;
+    box-shadow: red;
+    color: red;
+}
+input.valid{
+    color: green;
+    box-shadow: green;
+    border-color: green;
+}
+.cryteria.valid{
+    color: green;
+}
+.cryteria.invalid{
+    color: red;
 }
