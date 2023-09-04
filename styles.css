@@ -10,6 +10,7 @@ body{
 }
 .wrapper{
     display: flex;
+    align-items: flex-start;
 }
 .image-space{
     display: flex;
@@ -71,9 +72,9 @@ body{
     padding: 2rem;
 }
 .space-taker{
-    position: relative;
-    margin-left: 5rem;
-    max-width: 100%;
+max-width: 300px;
+min-width: 100px;
+margin-left: 3rem;
 }
 .signup-text{
     padding-top: 1rem;
@@ -83,8 +84,11 @@ body{
     border-bottom: 1px solid black;
 }
 .signup-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 3rem;
-    height: 43vh;
+    height: 30vh;
 }
 .names{
     display: flex;
@@ -96,6 +100,7 @@ body{
 }
 form{
     color: magenta;
+    height: 30vh;
 }
 label{
     display: block;
@@ -110,6 +115,7 @@ label{
 }
 .wrapper-passwords{
     width: 33%;
+    height: 6vh;
     display: flex;
     >.submit-password{
         margin-left: 5.4rem;

@@ -6,7 +6,6 @@ const phoneInput = document.getElementById("phone-number");
 const passwordInput = document.getElementById("password");
 const submitPasswordInput = document.getElementById("submit-password");
 const inputElements = document.querySelectorAll('input[id]');
-const cryteriaDivs = document.querySelectorAll('.cryteria');
 const criteriaDivs = {
     'first-name': document.getElementById('thename'),
     'last-name': document.getElementById('thelastname'),
