@@ -21,7 +21,6 @@ const patterns = {
     'email': /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
     'phone-number': /^\+\(\d{2}\)\d{9}$/,
     'password': /^.{6,}$/,
-    'submit-password': /^.{6,}$/ 
 };
 
 const inputIds = [
@@ -30,7 +29,6 @@ const inputIds = [
     'email',
     'phone-number',
     'password',
-    'submit-password'
 ];
 inputElements.forEach((inputElement) => {
     let timeoutId; // Variable to store the timeout ID
@@ -38,12 +36,9 @@ inputElements.forEach((inputElement) => {
     inputElement.addEventListener('input', () => {
         const inputId = inputElement.getAttribute('id');
         const associatedDiv = document.querySelector(`.cryteria[data-input-id="${inputId}"]`);
-
-        // Clear any previous timeouts
         if (timeoutId) {
             clearTimeout(timeoutId);
         }
-        // Set a timeout to apply the class changes after a brief delay (e.g., 300 milliseconds)
         timeoutId = setTimeout(() => {
             if (associatedDiv) {
                 if (inputElement.classList.contains('valid')) {
@@ -89,21 +84,38 @@ inputsArray.forEach((input) => {
         }
     });
 });
+submitPasswordInput.addEventListener('input', passwordsMatch);
+const submitPasswordDiv = criteriaDivs['submit-password'];
 function passwordsMatch() {
     const passwordInput = document.getElementById("password");
     const submitPasswordInput = document.getElementById("submit-password");
 
-    // Get the values of the password and submit-password inputs
     const passwordValue = passwordInput.value;
     const submitPasswordValue = submitPasswordInput.value;
 
-    // Compare the values and return true if they match, false otherwise
-    return passwordValue === submitPasswordValue;
+   if(passwordValue===submitPasswordValue){
+    submitPasswordDiv.style.color= "green";
+    return true;
+   }else{
+    submitPasswordDiv.style.color= "red";
+    return false;
+   }
 }
 document.querySelector("form").addEventListener("submit", function (event) {
     if (!passwordsMatch()) {
-        event.preventDefault(); // Prevent form submission if passwords don't match
+        event.preventDefault();
         alert("Passwords do not match. Please re-enter them.");
+    }
+    let isAnyInputInvalid = false;
+    inputElements.forEach((inputElement) => {
+        if (inputElement.classList.contains('invalid')) {
+            isAnyInputInvalid = true;
+        }
+    });
+
+    if (isAnyInputInvalid) {
+        event.preventDefault();
+        alert("Please fill out all fields correctly.");
     }
 });
 
