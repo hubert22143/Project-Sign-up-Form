@@ -17,16 +17,15 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 100vh;
-    width: 33vw;
     background-image: url(jeet-dhanoa-z3dCfQkJdMI-unsplash.jpg);
     background-size: cover;
+    height: 100vh;
 }
 .logo-container{
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color:	rgb(0,0,0,50%)
+    background-color:   rgb(0,0,0,50%)
     
 }
 .logo-container > span{
@@ -40,8 +39,8 @@ body{
 }
 .content-space{
     background-color: rgb(230, 125, 45,35%);
-    height: 100vh;
-    width: 67vw;
+    height: 100%;
+    width: 100%;
 }
 .text-register-container{
     font-size: 1.7rem;
@@ -51,14 +50,13 @@ body{
 .signup-space{
     padding: 3rem;
     width: 100%;
-    height: 100%;
     background-color: rgb(230, 125, 45,35%);
+    border: 2px solid black;
+    border-radius: 6px;
 }
 .bordered-sign{
     border: 2px solid black;
-    border-radius: 15px;
-    height: 30vw;
-
+    border-radius: 6px;
 }
 .signup-logo{
     display: flex;
@@ -72,9 +70,8 @@ body{
     padding: 2rem;
 }
 .space-taker{
-max-width: 300px;
-min-width: 100px;
-margin-left: 3rem;
+    width: 50%;
+    
 }
 .signup-text{
     padding-top: 1rem;
@@ -86,47 +83,68 @@ margin-left: 3rem;
 .signup-form{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 3rem;
-    height: 30vh;
 }
 .names{
     display: flex;
-    width: 33%;
-    height: 4vh;
+    width: 100%;
 }
-.last-name{
-    margin-left: 4rem;
+.first-name-holder{
+    display: block;
+}
+.last-name-holder{
+    display: block;
+}
+.email-holder,.first-name-holder,.last-name-holder,.phone-holder,.password-holder,.submit-holder{
+    display: block;
+}
+.email-holder{
+    max-width: 186.28px;
+    min-width: 100px;
+}
+.phone{
+    max-width: 200px;
+    min-width: 100px;
+}
+.password-holder{
+    max-width: 186.28px;
+    min-width: 100px;
+}
+.submit-password{
+    max-width: 200px;
+    min-width: 100px;
+}
+#phone-number-input{
+    max-width: 190px;
+    min-width: 100px;
+}
+#last-name{
+    min-width: 180px;
+    min-width: 100px;
 }
 form{
     color: magenta;
-    height: 30vh;
+    width: 50%;
+    height: 100%;
 }
 label{
     display: block;
 }
 .wrapper-email-phone{
-    width: 33%;
     display: flex;
-    margin-top: 1rem;
-    >.phone {
-        margin-left: 2.4rem;
-    }
+    width: 100%;
 }
 .wrapper-passwords{
-    width: 33%;
-    height: 6vh;
     display: flex;
-    >.submit-password{
-        margin-left: 5.4rem;
-    }
+    width: 100%;
 }
 .submit-button{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 33%;
-    height: 18vh;
+}
+#create-button{
+    padding: 30px 60px;
+    margin-left: 5rem;
 }
 input{
     border: 1px solid black;
@@ -137,8 +155,7 @@ input:focus{
     outline: none;
 }
 input[type="submit"]{
-    width: 15rem;
-    height: 5rem;
+    padding: 20px;
     background-color: rgb(0,128,0,60%);
     border: 2px solid gray;
     border-radius: 7px;
@@ -146,14 +163,8 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: green;
 }
-#phone-number{
-    min-width: 160px;
-}
-#last-name{
-    min-width: 180px;
-}
 p em {
-    font-size: smaller;
+    font-size: 1.3rem;
 
 }
 a{
@@ -163,18 +174,16 @@ a{
 a.sign-in-link:hover{
     color: rgb(138,43,226,70%);
     text-decoration: underline;
-    font-size: large;
+    font-size: 1.8rem;
 }
 .first-name-cryteria{ 
     font-size: 0.7rem;
     margin-left: 1rem;
 }
 #signup-image{
-    max-width: 300px;
-    min-width: 200px;
-}
-.cryteria{
-    margin-left: 1rem;
+max-width: 70%;
+max-height: 100%;
+min-width: 200px;
 }
 #thepassword,#theemail,#thesubmitpassword,#thephone,#thename,#thelastname{
     visibility: hidden;
@@ -202,3 +211,21 @@ input.valid{
 .cryteria.invalid{
     color: red;
 }
+.register-wrapper{
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 1388px) {
+    
+    .wrapper,form,.signup-form,.space-taker,.register-wrapper {
+      flex-direction: column;
+    }
+    .wrapper-email-phone,.wrapper-passwords,.names{
+        display: block;
+    }
+    .image-space{
+        width: 100%;
+    }
+  }
+

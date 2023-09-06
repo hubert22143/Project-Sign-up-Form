@@ -9,106 +9,122 @@
 </head>
 <body>
     <div class="wrapper">
-    <div class="image-space">
-      <div class="logo-container">
-         <img src="dragon-ball-logo.png" height="100px" width="200px" id="logo">
-        <span>Dragon Ball Sign-Up Form</span>
+        <div class="image-space">
+            <div class="logo-container">
+                <img src="dragon-ball-logo.png" height="100px" width="200px" id="logo">
+                <span>Dragon Ball Sign-Up Form</span>
+            </div>
+        </div>
+        <div class="content-space">
+            <div class="display-register-text">
+                <div class="text-register-container">
+                    <span>Unleash your inner strength and embark on a journey of greatness! Just as the Z Fighters push their limits, you too can overcome any challenge that comes your way. Remember, it's not about where you start, but the power you gather along the way. Sign up now and let's power up together!</span>
+                </div>
+                <div class="signup-space">
+                    <div class="bordered-sign">
+                        <div class="signup-logo">
+                            <img id="signup-logo" src="sign-logo.webp" width="100px" height="auto">
+                            <div id="signup-logo-text">
+                                <span>Gather them all!</span>
+                            </div>
+                        </div>
+                        <div class="signup-text">
+                            <span>Sign-Up Today!</span>
+                        </div>
+                        <div class="signup-form">
+                            <form action="" method="post">
+                                <div class="register-wrapper">
+                                    <div class="names">
+                                        <div class="first-name-holder">
+                                            <div class="first-name">
+                                                <label for="first-name">First Name</label>
+                                                <input type="text" id="first-name" placeholder="example: John" required="">
+                                            </div>
+                                            <div class="cryteria" id="thename" data-input-id="first-name" style="visibility: hidden;">
+                                                <ul>
+                                                    <li>At least four characters</li>
+                                                    <li>No special symbols</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="last-name-holder">
+                                            <div class="last-name" id="lastname">
+                                                <label for="last-name">Last Name</label>
+                                                <input type="text" id="last-name" placeholder="example: Brzeczyszczykiewicz" required="">
+                                            </div>
+                                            <div class="cryteria" id="thelastname" data-input-id="last-name" style="visibility: hidden;">
+                                                <ul>
+                                                    <li>No special symbols</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-email-phone">
+                                        <div class="email-holder">
+                                            <div class="email">
+                                                <label for="email">Email</label>
+                                                <input type="email" id="email" placeholder="example: myemail@o2.pl" required="">
+                                            </div>
+                                            <div class="cryteria" id="theemail" data-input-id="email" style="visibility: hidden;">
+                                                <ul>
+                                                    <li>Must match the format, ex: myemail@o2.pl</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="phone">
+                                            <div class="phone-holder">
+                                                <label for="phone-number">Phone Number</label>
+                                                <input type="text" id="phone-number-input" placeholder="example:+(48)123456789" class="valid">
+                                            </div>
+                                            <div class="cryteria" id="thephone" data-input-id="phone" style="visibility: hidden;">
+                                                <ul>
+                                                    <li>Must match the format ex: +(48)123456789</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrapper-passwords">
+                                        <div class="password-holder">
+                                            <div class="password">
+                                                <label for="password">Password</label>
+                                                <input type="password" id="password" placeholder="Your password.." required="" class="valid">
+                                            </div>
+                                            <div class="cryteria valid" id="thepassword" data-input-id="password" style="visibility: hidden;">
+                                                <ul>
+                                                    <li>At least six letters, special symbols allowed</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="submit-password">
+                                            <div class="submit-holder">
+                                                <label for="submit-password">Submit Password</label>
+                                                <input type="password" id="submit-password" placeholder="Rewrite your password..." required="">
+                                            </div>
+                                            <div class="cryteria invalid" id="thesubmitpassword" data-input-id="submit-password" style="visibility: hidden; color: red;">
+                                                <ul>
+                                                    <li>Must match the previous password</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="submit-button">
+                                        <div class="button-create">
+                                            <input type="submit" value="Create Account" id="create-button">
+                                            <div class="submit-button-text">
+                                                <p><em>Already have an account? <a href="#" class="sign-in-link">Sign in</a></em></p>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="space-taker">
+                                <img src="enjoy.webp" id="signup-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="content-space">
-        <div class="display-register-text">
-            <div class="text-register-container">
-            <span>Unleash your inner strength and embark on a journey of greatness! Just as the Z Fighters push their limits, you too can overcome any challenge that comes your way. Remember, it's not about where you start, but the power you gather along the way. Sign up now and let's power up together!</span>
-    </div>
-    <div class="signup-space">
-        <div class="bordered-sign">
-            <div class="signup-logo">
-                <img id="signup-logo" src="sign-logo.webp" width="100px" height="auto">
-                <div id="signup-logo-text">
-                <span>Gather them all!</span>
-            </div>
-        </div>
-        <div class="signup-text">
-            <span>Sign-Up Today!</span>
-        </div>
-        <div class="signup-form">
-            <form action="" method="post">
-                <div class="register-wrapper">
-                <div class="names">
-                <div class="first-name">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" placeholder="example: John" required>
-            </div>
-            <div class="cryteria" id="thename" data-input-id="first-name">
-                <ul>
-                    <li>At least four characters</li>
-                    <li>No special symbols</li>
-                </ul>
-            </div>
-                <div class="last-name" id="lastname">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" placeholder="example: Brzeczyszczykiewicz" required>
-            </div>
-            <div class="cryteria" id="thelastname" data-input-id="last-name">
-                <ul>
-                    <li>No special symbols</li>
-                </ul>
-            </div>
-            </div>
-            <div class="wrapper-email-phone">
-                <div class="email">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="example: myemail@o2.pl" required>
-                </div>
-                <div class="cryteria" id="theemail" data-input-id="email">
-                    <ul>
-                        <li>Must match the format, ex: myemail@o2.pl</li>
-                    </ul>
-                </div>
-                <div class="phone">
-                    <label for="phone-number">Phone Number</label>
-                    <input type="text" id="phone-number" placeholder="example: +(48)123456789">
-                </div>
-                <div class="cryteria" id="thephone" data-input-id="phone">
-                    <ul>
-                        <li>Must match the format ex: +(48)123456789</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="wrapper-passwords">
-                <div class="password">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Your password.." required>
-                </div>
-                <div class="cryteria" id="thepassword" data-input-id="password">
-                    <ul>
-                        <li>At least six letters, special symbols allowed</li>
-                    </ul>
-                </div>
-                <div class="submit-password">
-                    <label for="submit-password">Submit Password</label>
-                    <input type="password" id="submit-password" placeholder="Rewrite your password..." required>
-                </div>
-                <div class="cryteria" id="thesubmitpassword" data-input-id="submit-password" >
-                    <ul>
-                        <li>Must match the previous password</li>
-                    </ul>
-                </div>
-                        <div class="space-taker">
-            <img src="enjoy.webp" id="signup-image">
-        </div>
-            </div>
-        </div>
-            <div class="submit-button">
-                <div class="button">
-                <input type="submit" value="Create Account">
-                <p><em>Already have an account? <a href="#" class="sign-in-link">Sign in</a></em></p>
-                </div>
-            </div>
-
-            </form>
-        </div>
-    </div>
-</div>
 </body>
 </html>
