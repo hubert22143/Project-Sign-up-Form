@@ -70,7 +70,7 @@ body{
     padding: 2rem;
 }
 .space-taker{
-    width: 50%;
+    width: 100%;
     
 }
 .signup-text{
@@ -125,7 +125,7 @@ body{
 }
 form{
     color: magenta;
-    width: 50%;
+    width: 100%;
     height: 100%;
 }
 label{
@@ -141,10 +141,11 @@ label{
 }
 .submit-button{
     display: flex;
+    justify-content: center;
+    max-width: 300px;
 }
 #create-button{
     padding: 30px 60px;
-    margin-left: 5rem;
 }
 input{
     border: 1px solid black;
@@ -217,7 +218,21 @@ input.valid{
     width: 100%;
 }
 @media screen and (max-width: 1388px) {
-    
+    body{
+        font-size: 0.875rem;
+    }
+    .signup-logo{
+        padding: 30px;
+    }
+    .signup-text{
+        font-size: 1.8rem;
+    }
+    p em{
+        font-size: 1rem;
+    }
+    .text-register-container{
+        font-size: 1.2rem;
+    }
     .wrapper,form,.signup-form,.space-taker,.register-wrapper {
       flex-direction: column;
     }
@@ -227,5 +242,16 @@ input.valid{
     .image-space{
         width: 100%;
     }
+    .signup-text{
+        display: flex;
+        padding: 40px;
+    }
   }
-
+  @media screen and (max-width: 399px) {
+    .signup-form{
+        padding: 1rem;
+    }
+    .space-taker{
+        margin-top: 1rem;
+    }
+  }
