@@ -2,15 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
 const nameInput = document.getElementById("first-name");
 const surnameInput = document.getElementById("last-name");
 const emailInput = document.getElementById("email");
-const phoneInput = document.getElementById("phone-number");
+const phoneInput = document.getElementById("phone-number-input");
 const passwordInput = document.getElementById("password");
 const submitPasswordInput = document.getElementById("submit-password");
 const inputElements = document.querySelectorAll('input[id]');
+
+
+
 const criteriaDivs = {
     'first-name': document.getElementById('thename'),
     'last-name': document.getElementById('thelastname'),
     'email': document.getElementById('theemail'),
-    'phone-number': document.getElementById('thephone'),
+    'phone-number-input': document.getElementById('thephone'),
     'password': document.getElementById('thepassword'),
     'submit-password': document.getElementById('thesubmitpassword')
 };
@@ -19,7 +22,7 @@ const patterns = {
     'first-name': /^[A-Za-z]{4,}$/,
     'last-name': /^[A-Za-z]+$/,
     'email': /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
-    'phone-number': /^\+\(\d{2}\)\d{9}$/,
+    'phone-number-input': /^\+\(\d{2}\)\d{9}$/,
     'password': /^.{6,}$/,
 };
 
@@ -27,12 +30,12 @@ const inputIds = [
     'first-name',
     'last-name',
     'email',
-    'phone-number',
+    'phone-number-input',
     'password',
+    'submit-password'
 ];
 inputElements.forEach((inputElement) => {
     let timeoutId; // Variable to store the timeout ID
-
     inputElement.addEventListener('input', () => {
         const inputId = inputElement.getAttribute('id');
         const associatedDiv = document.querySelector(`.cryteria[data-input-id="${inputId}"]`);
@@ -54,10 +57,12 @@ inputElements.forEach((inputElement) => {
 });
 inputIds.forEach(idInput => {
     const inputElement = document.getElementById(idInput);
-    inputElement.addEventListener('input', () => {
-        validateInput(inputElement,idInput);
-    })
-})
+    if (inputElement) {
+        inputElement.addEventListener('input', () => {
+            validateInput(inputElement, idInput);
+        });
+    }
+});
 function validateInput(inputElement,patternKey){
     const pattern = patterns[patternKey];
     const inputValue = inputElement.value;

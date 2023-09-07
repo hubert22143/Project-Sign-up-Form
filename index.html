@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -42,7 +41,7 @@
                                                 <label for="first-name">First Name</label>
                                                 <input type="text" id="first-name" placeholder="example: John" required="">
                                             </div>
-                                            <div class="cryteria" id="thename" data-input-id="first-name" style="visibility: hidden;">
+                                            <div class="cryteria" id="thename" data-input-id="first-name" >
                                                 <ul>
                                                     <li>At least four characters</li>
                                                     <li>No special symbols</li>
@@ -54,7 +53,7 @@
                                                 <label for="last-name">Last Name</label>
                                                 <input type="text" id="last-name" placeholder="example: Brzeczyszczykiewicz" required="">
                                             </div>
-                                            <div class="cryteria" id="thelastname" data-input-id="last-name" style="visibility: hidden;">
+                                            <div class="cryteria" id="thelastname" data-input-id="last-name">
                                                 <ul>
                                                     <li>No special symbols</li>
                                                 </ul>
@@ -67,7 +66,7 @@
                                                 <label for="email">Email</label>
                                                 <input type="email" id="email" placeholder="example: myemail@o2.pl" required="">
                                             </div>
-                                            <div class="cryteria" id="theemail" data-input-id="email" style="visibility: hidden;">
+                                            <div class="cryteria" id="theemail" data-input-id="email">
                                                 <ul>
                                                     <li>Must match the format, ex: myemail@o2.pl</li>
                                                 </ul>
@@ -76,9 +75,9 @@
                                         <div class="phone">
                                             <div class="phone-holder">
                                                 <label for="phone-number">Phone Number</label>
-                                                <input type="text" id="phone-number-input" placeholder="example:+(48)123456789" class="valid">
+                                                <input type="text" id="phone-number-input" placeholder="example:+(48)123456789">
                                             </div>
-                                            <div class="cryteria" id="thephone" data-input-id="phone" style="visibility: hidden;">
+                                            <div class="cryteria" id="thephone" data-input-id="phone">
                                                 <ul>
                                                     <li>Must match the format ex: +(48)123456789</li>
                                                 </ul>
@@ -89,9 +88,9 @@
                                         <div class="password-holder">
                                             <div class="password">
                                                 <label for="password">Password</label>
-                                                <input type="password" id="password" placeholder="Your password.." required="" class="valid">
+                                                <input type="password" id="password" placeholder="Your password.." required="">
                                             </div>
-                                            <div class="cryteria valid" id="thepassword" data-input-id="password" style="visibility: hidden;">
+                                            <div class="cryteria" id="thepassword" data-input-id="password">
                                                 <ul>
                                                     <li>At least six letters, special symbols allowed</li>
                                                 </ul>
@@ -102,7 +101,7 @@
                                                 <label for="submit-password">Submit Password</label>
                                                 <input type="password" id="submit-password" placeholder="Rewrite your password..." required="">
                                             </div>
-                                            <div class="cryteria invalid" id="thesubmitpassword" data-input-id="submit-password" style="visibility: hidden; color: red;">
+                                            <div class="cryteria" id="thesubmitpassword" data-input-id="submit-password">
                                                 <ul>
                                                     <li>Must match the previous password</li>
                                                 </ul>
@@ -128,5 +127,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
